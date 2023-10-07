@@ -1,15 +1,16 @@
-import { useState } from 'react'
 import './App.css'
+import TradeList from './components/TradeList'
+import { TradeContextProvider } from './Providers/TradeProvider';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div className='bg-gray-500'>
-      </div>
-      <h1 className='text-blue-500'>Vite + React</h1>
-    </>
+    <TradeContextProvider>
+      <div className="text-center bg-gray-300 border border-blue-300 w-screen h-screen flex justify-center items-center">
+        <div className='w-full h-full p-4'>
+          <TradeList />
+        </div>
+      </div >
+    </TradeContextProvider>
   )
 }
 
