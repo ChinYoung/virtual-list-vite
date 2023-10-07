@@ -13,8 +13,10 @@ function VirtualList<T extends { id: string }>({ list, render }: { list: T[], re
   const childrenRef = useRef<(HTMLDivElement | null)[]>()
 
   const [heightCache, setHeightCache] = useState<number[]>(Array.from({ length: list.length }).map(() => DEFAULT_CHILD_HEIGHT))
+
   const [containerHeight, setContainerHeight] = useState<number>(0)
   const [contentScrollTop, setContentScrollTop] = useState<number>(0)
+
   const [virtualOffset, setVirtualOffset] = useState<number>(0)
   const [startIndex, setStartIndex] = useState<number>(0)
   const [endIndex, setEndIndex] = useState<number>(0)

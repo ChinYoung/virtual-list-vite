@@ -1,0 +1,6 @@
+export enum ForwardMessageType {
+  UPDATE_CONTAINER_HEIGHT = 1,
+  UPDATE_CONTENT_SCROLL_TOP,
+  UPDATE_HEIGHT_CACHE
+}
+
