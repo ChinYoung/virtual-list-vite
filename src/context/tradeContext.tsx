@@ -1,17 +1,20 @@
 import { createContext } from "react"
 import { TTrade } from "../types/trade"
+import { TUpdateContainerHeightPayload, TUpdateContentScrollTopPayload, TUpdateHeightCachePayload } from "../types/worker"
 
 export type TTradeContext = {
   totalHeight: number
-  contentScrollTop: number
-  updateTotalHeight: (newHeight: number) => void
-  updateContentScrollTop: (newScrollTop: number) => void
+  virtualOffset: number
   toRenderList: TTrade[]
+  updateContainerHeight(newHeight: TUpdateContainerHeightPayload): void
+  updateContentScrollTop(newScrollTop: TUpdateContentScrollTopPayload): void
+  updateHeightCache(heightDetail: TUpdateHeightCachePayload): void
 }
 export const tradeContext = createContext<TTradeContext>({
-  contentScrollTop: 0,
   totalHeight: 0,
-  updateTotalHeight: () => { },
-  updateContentScrollTop: () => { },
+  virtualOffset: 0,
   toRenderList: [],
+  updateContainerHeight() { },
+  updateContentScrollTop() { },
+  updateHeightCache() { },
 })
