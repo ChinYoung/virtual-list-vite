@@ -11,6 +11,7 @@ export enum EStatus {
 
 export type TTrade = {
   id: string
+  index: number
   name: string
   symbol: string
   trader: string
