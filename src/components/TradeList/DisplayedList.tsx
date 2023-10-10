@@ -1,5 +1,5 @@
 import { FC, useContext } from "react"
-import TradeInfo from "../TradeInfo"
+import TradeInfo from "./TradeInfo"
 import { tradeContext } from "../../context/tradeContext"
 
 export const DisplayedList: FC = () => {

@@ -1,6 +1,6 @@
 import './App.css'
+import { TradeContextProvider } from './Providers/TradeProvider'
 import TradeList from './components/TradeList'
-import { TradeContextProvider } from './Providers/TradeProvider';
 
 function App() {
   return (

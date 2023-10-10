@@ -11,14 +11,13 @@ export enum EStatus {
 
 export type TTrade = {
   id: string
-  index: number
+  tradeId: string
   name: string
   symbol: string
   trader: string
-  price: number
-  lastPrice: number
-  trend: ETrend
+  price: string
+  prevPrice: string
   status: EStatus
-  updateAt: number
-  createAt: number
+  updatedAt: number
+  createdAt: number
 }
