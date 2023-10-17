@@ -74,7 +74,7 @@ export class TradeClient implements ITradeClient {
     }
     return {
       startIndex,
-      accumulateTop: (startIndex + 2) * this.DEFAULT_HEIGHT
+      accumulateTop: startIndex * this.DEFAULT_HEIGHT
     }
   }
 
